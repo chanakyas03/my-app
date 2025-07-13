@@ -8,7 +8,8 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "Personal portfolio site built with Atomic Design and Next.js.",
-    tech: ["React", "TypeScript", "Tailwind"],
+    tech: ["Next.js", "TypeScript", "Bootstrap"],
+    live: "https://my-3f4138lws-chanakya-sharma-s-projects.vercel.app/",
   },
 ];
 
