@@ -26,7 +26,7 @@ export default function ContactForm() {
         />
       </div>
       <button type="submit" className="btn btn-info text-white">
-        Send Message
+        Send Message...
       </button>
     </form>
   );
