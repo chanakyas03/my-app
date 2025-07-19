@@ -1,2 +1,204 @@
 /* styles/globals.css */
-@import "bootstrap/dist/css/bootstrap.min.css"; /* We'll import bootstrap here */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+@import "bootstrap/dist/css/bootstrap.min.css";
+
+:root {
+  --color-bg: #101828;           /* Rich dark blue */
+  --color-section: #1d2939;      /* Deep slate blue */
+  --color-accent: #22d3a9;       /* Emerald green */
+  --color-accent2: #2563eb;      /* Vivid blue */
+  --color-text: #f1f5f9;         /* Very light gray */
+  --color-secondary: #94a3b8;    /* Slate gray */
+  --color-muted: #334155;        /* Slate */
+}
+
+body {
+  font-family: 'Inter', Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.section-divider {
+  border-top: 2px solid var(--color-muted);
+  margin: 3rem 0 2rem 0;
+}
+
+.card, .bg-dark, .bg-section {
+  background: var(--color-section) !important;
+  color: var(--color-text) !important;
+  box-shadow: 0 4px 24px rgba(16,24,40,0.15);
+  border-radius: 1rem;
+  border: none;
+}
+
+.text-info, .link-info, .btn-info, .navbar-brand.text-info, .text-accent {
+  color: var(--color-accent) !important;
+}
+.bg-info, .badge.bg-secondary, .btn-info, .badge-accent {
+  background-color: var(--color-accent) !important;
+  color: #101828 !important;
+}
+
+.text-secondary, .text-muted, .form-label.text-white {
+  color: var(--color-secondary) !important;
+}
+
+.navbar, footer {
+  background: var(--color-section) !important;
+  color: var(--color-secondary) !important;
+}
+
+.nav-hover {
+  transition: color 0.2s;
+}
+.nav-hover:hover, .nav-hover:focus {
+  color: var(--color-accent2) !important;
+  text-decoration: underline;
+}
+
+footer {
+  font-size: 1rem;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: var(--color-muted);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-section);
+  border-radius: 4px;
+}
+
+.btn-outline-info {
+  border-color: var(--color-accent) !important;
+  color: var(--color-accent) !important;
+}
+.btn-outline-info:hover, .btn-outline-info:focus {
+  background: var(--color-accent2) !important;
+  color: #101828 !important;
+  border-color: var(--color-accent2) !important;
+}
+
+input, textarea, .form-control {
+  background: var(--color-bg) !important;
+  color: var(--color-text) !important;
+  border: 1px solid var(--color-muted) !important;
+}
+input:focus, textarea:focus, .form-control:focus {
+  border-color: var(--color-accent) !important;
+  box-shadow: 0 0 0 2px var(--color-accent)33;
+}
+
+.text-accent {
+  color: var(--color-accent) !important;
+}
+.badge-accent {
+  background: var(--color-accent) !important;
+  color: #101828 !important;
+}
+.link-accent {
+  color: var(--color-accent2) !important;
+  text-decoration: underline;
+}
+
+/* Fade-in animation for sections */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Card hover elevation */
+.card:hover, .card:focus-within {
+  box-shadow: 0 8px 32px 0 var(--color-accent), 0 4px 24px rgba(10,25,47,0.25);
+  transform: translateY(-4px) scale(1.02);
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+/* Animated accent bar under section titles */
+.section-title-accent {
+  display: inline-block;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+.section-title-accent::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin-top: 8px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--color-accent), #43e6b0 80%);
+  animation: accentBar 2s infinite alternate;
+}
+@keyframes accentBar {
+  0% { width: 40px; }
+  100% { width: 80px; }
+}
+
+/* Profile image glow */
+.profile-glow {
+  box-shadow: 0 0 0 6px rgba(100,255,218,0.2), 0 0 32px 8px var(--color-accent);
+  animation: glowPulse 2s infinite alternate;
+}
+@keyframes glowPulse {
+  0% { box-shadow: 0 0 0 6px rgba(100,255,218,0.2), 0 0 32px 8px var(--color-accent); }
+  100% { box-shadow: 0 0 0 12px rgba(100,255,218,0.1), 0 0 48px 16px var(--color-accent); }
+}
+
+.bg-section {
+  background: var(--color-section) !important;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 16px 0 rgba(16,24,40,0.10);
+}
+
+.rounded-4 {
+  border-radius: 1.5rem !important;
+}
+
+.shadow-sm {
+  box-shadow: 0 2px 8px 0 rgba(10,25,47,0.10) !important;
+}
+
+.btn-lg {
+  font-size: 1.15rem;
+  padding: 0.75rem 2.5rem;
+}
+
+.hero-section {
+  min-height: 90vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.contact-bg {
+  background: linear-gradient(135deg, #1d2939 60%, #2563eb22 100%);
+  /* fallback for dark mode: slightly lighter than section */
+}
+
+.project-section-bg {
+  background: linear-gradient(120deg, #101828 70%, #2563eb22 100%);
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.project-card-accent {
+  border: 2px solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  z-index: 1;
+}
+.project-card-accent:hover, .project-card-accent:focus-within {
+  border-color: var(--color-accent2);
+  box-shadow: 0 8px 32px 0 var(--color-accent2), 0 4px 24px rgba(16,24,40,0.18);
+}

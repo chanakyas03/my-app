@@ -2,38 +2,34 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-   <section className="min-vh-100 pt-5 d-flex flex-column flex-md-row align-items-center bg-dark text-white px-4 px-md-5">
-      {/* Left Column - Text */}
-      <div className="w-100 w-md-50 mb-4 mb-md-0 pe-md-5">
-        <p className="text-info small fst-italic mb-2">Hi, my name is</p>
-        <h1 className="display-4 fw-bold mb-2">Chanakya Sharma.</h1>
-
-        <p className="text-secondary mb-4">
-          I&apos;m a developer passionate about crafting accessible, user interfaces that blend thoughtful
-          design with robust engineering. My favorite work lies at the intersection of design and
-          development, creating experiences that not only look great but are meticulously built for
-          performance and usability. Currently, I&apos;m a Front-End Engineer at Cogneesol, specializing in
-          accessibility. I contribute to the creation and maintenance of UI components that power
-          Apnikheti&apos;s frontend, ensuring our platform meets web accessibility standards and best
-          practices to deliver an inclusive user experience.
-        </p>
-
-        <a href="#projects" className="btn btn-outline-info btn-lg">
-          Check out my work
-        </a>
-      </div>
-
-      {/* Right Column - Image */}
-      <div className="w-100 w-md-50 d-flex justify-content-center">
+    <section className="min-vh-100 d-flex flex-column justify-content-center align-items-center text-center hero-section px-4 fade-in">
+      <div className="mb-4">
         <Image
           src="/porfolio.jpeg"
           alt="Chanakya Sharma"
-          width={300}
-          height={300}
-          className="img-fluid rounded-circle"
-          style={{ maxWidth: "100%", height: "auto" }}
+          width={180}
+          height={180}
+          className="img-fluid rounded-circle profile-glow border border-4 border-accent mb-3"
+          style={{ maxWidth: "180px", height: "180px", objectFit: "cover" }}
         />
       </div>
+      <div className="mb-2">
+        <h2 className=" display-6 fw-bold mb-1 text-accent">Chanakya Sharma</h2>
+        <div className="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 mb-2" style={{fontSize: '1.1rem'}}>
+          <span className="text-secondary">Punjab, India</span>
+          <span className="text-muted d-none d-md-inline">|</span>
+          <a href="tel:+917719489251" className="text-secondary text-decoration-none">+91 7719489251</a>
+          <span className="text-muted d-none d-md-inline">|</span>
+          <a href="mailto:chanakyasharma31@gmail.com" className="text-secondary text-decoration-none">chanakyasharma31@gmail.com</a>
+        </div>
+      </div>
+      <h2 className="h4 text-accent mb-3">React JS Developer</h2>
+      <p className="lead text-secondary mb-4" style={{maxWidth: 600, margin: "0 auto"}}>
+        I build accessible, performant, and beautiful web applications. Currently Front-End Engineer at Cogneesol, passionate about UI/UX and modern web technologies.
+      </p>
+      {/* <a href="#projects" className="btn btn-outline-info btn-lg rounded-pill px-4 shadow-sm">
+        View My Work
+      </a> */}
     </section>
   );
 }
