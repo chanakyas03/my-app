@@ -7,11 +7,11 @@ import Experience from "./components/organisms/Experience";
 export default function Home() {
   return (
    <>
-   <Hero/>
+   <div id="hero"><Hero/></div>
    <About/>
    <Experience/>
    <Projects/>
-   {/* <Contact/> */}
+   <Contact/>
    </>
   );
 }

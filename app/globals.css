@@ -79,9 +79,9 @@ footer {
   color: var(--color-accent) !important;
 }
 .btn-outline-info:hover, .btn-outline-info:focus {
-  background: var(--color-accent2) !important;
-  color: #101828 !important;
-  border-color: var(--color-accent2) !important;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent2));
+  color: #fff !important;
+  box-shadow: 0 4px 24px 0 var(--color-accent2);
 }
 
 input, textarea, .form-control {
@@ -201,4 +201,39 @@ input:focus, textarea:focus, .form-control:focus {
 .project-card-accent:hover, .project-card-accent:focus-within {
   border-color: var(--color-accent2);
   box-shadow: 0 8px 32px 0 var(--color-accent2), 0 4px 24px rgba(16,24,40,0.18);
+}
+
+.hero-name-animate {
+  animation: fadeInUp 1.1s cubic-bezier(0.23, 1, 0.32, 1) 0.1s both;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  box-shadow: 0 2px 16px 0 rgba(16,24,40,0.10) !important;
+  transition: box-shadow 0.2s;
+}
+
+.project-img {
+  border-radius: 1rem;
+  box-shadow: 0 2px 12px 0 rgba(16,24,40,0.10);
+}
+
+@media (max-width: 767.98px) {
+  .project-img {
+    margin-bottom: 1rem !important;
+  }
+  .project-card-accent {
+    margin-bottom: 1.5rem !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-title-accent {
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    letter-spacing: -1px;
+  }
 }
