@@ -13,23 +13,19 @@ export default function Hero() {
           style={{ maxWidth: "180px", height: "180px", objectFit: "cover" }}
         />
       </div>
-      <div className="mb-2">
-        <h1 className="display-6 fw-bold mb-1 hero-name-animate text-accent" >Chanakya Sharma</h1>
-        <div className="d-flex flex-column flex-md-row justify-content-center align-items-center gap-2 mb-2" style={{fontSize: '1.1rem'}}>
-          <span className="text-secondary"><i className="bi bi-geo-alt-fill me-1"></i>Punjab, India</span>
-          <span className="text-muted d-none d-md-inline">|</span>
-          <a href="tel:+917719489251" className="text-secondary text-decoration-none"><i className="bi bi-telephone-fill me-1"></i>+91 7719489251</a>
-          <span className="text-muted d-none d-md-inline">|</span>
-          <a href="mailto:chanakyasharma31@gmail.com" className="text-secondary text-decoration-none"><i className="bi bi-envelope-fill me-1"></i>chanakyasharma31@gmail.com</a>
-        </div>
+      <h1 className="display-4 fw-bold mb-2 hero-name-animate text-accent">Chanakya Sharma</h1>
+      <h2 className="h5 text-secondary mb-4">React JS Developer</h2>
+      <div className="d-flex flex-wrap justify-content-center gap-2 mb-4">
+        <a href="https://github.com/chanakya-sharma" className="btn btn-outline-info rounded-pill px-3" target="_blank" rel="noopener noreferrer">
+          <i className="bi bi-github me-2"></i>GitHub
+        </a>
+        <a href="/Chanakya-resume.pdf" download="Chanakya-resume.pdf" className="btn btn-outline-info rounded-pill px-3">
+          <i className="bi bi-file-earmark-person me-2"></i>Resume
+        </a>
+        <a href="mailto:chanakyasharma31@gmail.com" className="btn btn-outline-info rounded-pill px-3">
+          <i className="bi bi-envelope-fill me-2"></i>Email
+        </a>
       </div>
-      <h2 className="h4 text-accent mb-3">React JS Developer</h2>
-      <p className="lead text-secondary mb-4" style={{maxWidth: 600, margin: "0 auto"}}>
-        I build accessible, performant, and beautiful web applications. Currently Front-End Engineer at Cogneesol, passionate about UI/UX and modern web technologies.
-      </p>
-      <a href="#projects" className="btn btn-outline-info btn-lg rounded-pill px-4 shadow-sm">
-        View My Work
-      </a>
     </section>
   );
 }
